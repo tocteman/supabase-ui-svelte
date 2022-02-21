@@ -46,7 +46,7 @@
   }
 
   button.primary {
-    background: #f39212;
+    background: #2e486d;
     border-color: transparent;
     color: white;
   }

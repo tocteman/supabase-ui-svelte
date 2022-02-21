@@ -8,6 +8,6 @@
 
 <style>
   .danger {
-    color: rgba(245, 101, 101)
+    color: #e5332b;
   }
 </style>

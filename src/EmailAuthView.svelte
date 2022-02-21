@@ -34,8 +34,8 @@
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <Input name="email" type="email" label="Email address" icon="mail" bind:value={email}/>
-  <Input name="password" type="password" label="Clave" icon="key" bind:value={password}/>
+  <Input name="email" type="email" label="Dirección de correo" icon="mail" bind:value={email}/>
+  <Input name="password" type="password" label="Contraseña" icon="key" bind:value={password}/>
 
   {#if view == 'sign_up'}
     <Button block primary size="large" {loading} icon="inbox">Registro</Button>

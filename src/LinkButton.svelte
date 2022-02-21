@@ -8,6 +8,6 @@
     cursor: pointer;
     font-size: 0.875rem;
     line-height: 1.25rem;
-    color: rgba(62, 207, 142);
+    color: #E0F2FE;
   }
 </style>

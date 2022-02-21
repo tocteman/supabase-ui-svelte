@@ -79,7 +79,7 @@
   .providers {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
   }
 
   .providers.horizontal {
