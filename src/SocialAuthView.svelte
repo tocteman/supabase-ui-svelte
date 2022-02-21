@@ -57,12 +57,12 @@
 </script>
 
 {#if hasProviders}
-  <span class="heading">{view == 'sign_up' ? 'Registro' : 'Iniciar Sesión'} with</span>
+  <span class="heading">{view == 'sign_up' ? 'Registro' : 'Iniciar Sesión'} con</span>
 
   <div class="providers" class:horizontal={socialLayout == 'horizontal'}>
     {#each providers as provider}
       <Button block shadow icon={provider} size={socialButtonSize} style={socialColors ? buttonStyles[provider] : {}} on:click={() => handleProviderSignIn(provider)}>
-        {#if socialLayout == 'vertical'}{view == 'sign_up' ? 'Registro' : 'Iniciar Sesión'} con {provider}{/if}
+        {#if socialLayout == 'vertical'}{view == 'sign_up' ? 'Registro' : 'Inicia'} con {provider}{/if}
       </Button>
     {/each}
   </div>

@@ -16,11 +16,12 @@
     loading = true
 
     if (view == 'sign_up') {
-      const { error: signUpError } = await supabaseClient.auth.signUp({
+      const { data: authData, error: signUpError } = await supabaseClient.auth.signUp({
         email, password
       })
 
       if (signUpError) error = signUpError.message
+      if (authData) message = "Revisa tu bandeja de entrada."
     } else if (view == 'sign_in') {
       const { error: signInError } = await supabaseClient.auth.signIn({
         email, password
