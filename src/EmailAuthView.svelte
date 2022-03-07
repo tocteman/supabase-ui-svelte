@@ -16,6 +16,10 @@
     loading = true
 
     if (view == 'sign_up') {
+      if (!name || name === '') {
+        error = 'Por favor ingresa tu nombre completo'
+        return
+      }
       const { data: authData, error: signUpError } = await supabaseClient.auth.signUp({
         email, 
         password,
@@ -39,10 +43,10 @@
 <form on:submit|preventDefault={submit}>
   <Input name="email" type="email" label="Dirección de correo" icon="mail" bind:value={email}/>
   <Input name="password" type="password" label="Contraseña" icon="key" bind:value={password}/>
-  <Input name="name" type="text" label="Nombre Completo" icon="user" bind:value={name}/>
 
 
   {#if view == 'sign_up'}
+    <Input name="name" type="text" label="Nombre Completo" icon="user" bind:value={name}/>
     <Button block primary size="large" {loading} icon="inbox">Registro</Button>
     <div class="links">
       <LinkButton on:click={() => setView('magic_link')}>Ingresar con magic link</LinkButton>
