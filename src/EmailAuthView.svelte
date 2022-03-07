@@ -8,7 +8,7 @@
   export let view
   export let setView
 
-  let error = '', message = '', loading = false, email = '', password = ''
+  let error = '', message = '', loading = false, email = '', password = '', name = ''
 
   async function submit() {
     error = ''
@@ -17,7 +17,9 @@
 
     if (view == 'sign_up') {
       const { data: authData, error: signUpError } = await supabaseClient.auth.signUp({
-        email, password
+        email, 
+        password,
+        data: { name }
       })
 
       if (signUpError) error = signUpError.message
@@ -37,6 +39,8 @@
 <form on:submit|preventDefault={submit}>
   <Input name="email" type="email" label="Dirección de correo" icon="mail" bind:value={email}/>
   <Input name="password" type="password" label="Contraseña" icon="key" bind:value={password}/>
+<Input name="name" type="text" label="Nombre" icon="user" bind:value={name}/>
+
 
   {#if view == 'sign_up'}
     <Button block primary size="large" {loading} icon="inbox">Registro</Button>

@@ -1,5 +1,5 @@
 <script>
-  import { KeyIcon, MailIcon, InboxIcon } from 'svelte-feather-icons'
+  import { KeyIcon, MailIcon, InboxIcon, UserIcon } from 'svelte-feather-icons'
   import GoogleIcon from './social-icons/GoogleIcon.svelte'
   import FacebookIcon from './social-icons/FacebookIcon.svelte'
   import TwitterIcon from './social-icons/TwitterIcon.svelte'
@@ -12,6 +12,7 @@
   const map = {
     mail: MailIcon,
     key: KeyIcon,
+    user: UserIcon,
     inbox: InboxIcon,
     google: GoogleIcon,
     facebook: FacebookIcon,
