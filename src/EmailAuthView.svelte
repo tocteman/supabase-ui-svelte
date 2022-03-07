@@ -39,7 +39,7 @@
 <form on:submit|preventDefault={submit}>
   <Input name="email" type="email" label="Dirección de correo" icon="mail" bind:value={email}/>
   <Input name="password" type="password" label="Contraseña" icon="key" bind:value={password}/>
-<Input name="name" type="text" label="Nombre" icon="user" bind:value={name}/>
+  <Input name="name" type="text" label="Nombre Completo" icon="user" bind:value={name}/>
 
 
   {#if view == 'sign_up'}
